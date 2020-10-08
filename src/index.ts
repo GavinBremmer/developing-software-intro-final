@@ -1,4 +1,5 @@
 import yargs = require('yargs');
+import { calcHouseMaterials } from './calculator';
 
 yargs.command(
     "calc-house-materials",
@@ -32,7 +33,11 @@ yargs.command(
     },
 
     function( args ){
-        console.log(args.width,args.length,args.isFeet,args.name)
+        let name = args.name
+        let width = args.width
+        let length = args.length
+        let units = args.isFeet
+        calcHouseMaterials(name,width,length,units)
     }
 );
 
