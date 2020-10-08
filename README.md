@@ -1,23 +1,34 @@
 # Focus College ACSD Final
 
-This respository is intended for the use of Focus College Students enrolled in the Advanced Certificate of Software Development located in Kelowna, BC and Surrey, BC.
+This is the final exam for Developing Software:Introduction in the Advanced Certificate of Software Development program.
 
----
+This project contains the following packages:
 
-You can remove everything below the above line once you're ready to edit this file.
+- Typescript Compiler
+    - tsconfig.json
+- Git Repository
+    - .gitignore
 
-## Getting Started
+## Installation Instructions
 
-Please read the [Final Test Requirements](./assignment/readme.md)
+To install this package please run:
 
-## IMPORTANT NOTICE
+``` 
+npm install 
+```
 
-DO NOT PUSH THIS REPOSITORY TO YOUR GITHUB ACCOUNT OR MAKE A PULL REQUEST INTO THE FINAL UNTIL DIRECTLY INSTRUCTED TO DO SO. THIS IS A TEST AND CANNOT BE COLLABORATED ON WITH OTHER STUDENTS.
+## Start Scripts
 
-## Deadline For Submissions
+This project has the following scripts:
 
-The deadline for this assignment is 5PM on Friday October 9th, 2020. No extensions can be given for this final.
-
-## Notes
-
-This is a PUBLIC repository attached to your github account and something that you can demonstrate to potential employers. Take care to ensure professionalism for both you and your team's sake. This will be the first entry into your professional portfolio.
+To compile the program use:
+```
+npm run build:compile
+```
+To run the program use:
+```
+npm run start
+```
+To compile and run the program use:
+```
+npm run start:dev
