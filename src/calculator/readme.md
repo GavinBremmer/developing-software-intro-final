@@ -16,3 +16,19 @@ Outputs parameters to the console.
 ## Returns
 
 Returns `void`
+
+# getHouseMaterials ( name:string )
+
+This function takes a name and outputs it to the console.
+
+## Parameters
+
+  - `name:string` The name of the house to be recalled
+
+## Usage
+
+Outputs parameter to the console.
+
+## Returns
+
+Returns `void`

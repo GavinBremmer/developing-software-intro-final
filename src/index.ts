@@ -1,5 +1,5 @@
 import yargs = require('yargs');
-import { calcHouseMaterials } from './calculator';
+import { calcHouseMaterials, getHouseMaterials } from './calculator';
 
 yargs.command(
     "calc-house-materials",
@@ -55,7 +55,8 @@ yargs.command(
     },
 
     function( args ){
-        console.log(args.name)
+        let name = args.name
+        getHouseMaterials(name)
     }
 );
 
