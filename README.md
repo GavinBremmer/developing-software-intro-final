@@ -15,6 +15,10 @@ This project contains the following packages:
     - .eslintrc.json
     - .eslintignore
 
+- Prettier (Code Formatting)
+    - .prettierrc.json
+    - .prettierignore
+
 ## Installation Instructions
 
 To install this package please run:
@@ -42,12 +46,17 @@ To run the linter:
 npm run lint
 ```
 
+To run the code formatter use:
+```
+npm run prettier
+```
+
 To compile and run the program use:
 ```
 npm run start:dev
 ```
 
-To lint, compile and run the program use:
+To lint, format, compile and run the program use:
 ```
 npm run start:all
 ```
