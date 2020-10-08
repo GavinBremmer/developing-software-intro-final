@@ -1,1 +1,59 @@
-export const hello = () => "Hello world!";
+import yargs = require('yargs');
+
+yargs.command(
+    "calc-house-materials",
+
+    "Calculate the materials required to build a house",
+
+    {
+        width: {
+            type: "number",
+            alias: "w",
+            description: "The width of the house",
+        },
+
+        length: {
+            type: "number",
+            alias: "l",
+            description: "The length of the house",
+        },
+
+        isFeet: {
+            type: "boolean",
+            alias: "f",
+            description: "Specifies that feet are being used as the unit of measure",
+        },
+
+        name: {
+            type: "string",
+            alias: "n",
+            description: "Specifies the name that this house will be stored under",
+        },
+    },
+
+    function( args ){
+        console.log(args.width,args.length,args.isFeet,args.name)
+    }
+);
+
+yargs.command(
+    "get-house-materials",
+
+    "Recalls the materials for a previously saved house",
+
+    {
+        name: {
+            type: "string",
+            alias: "n",
+            description: "Specifies the name that this house will be stored under",
+        },
+    },
+
+    function( args ){
+        console.log(args.name)
+    }
+);
+
+yargs.help();
+
+yargs.parse();

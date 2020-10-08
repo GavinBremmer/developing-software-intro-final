@@ -32,6 +32,17 @@ To install this package please run:
 npm install 
 ```
 
+## Yargs
+To use the yargs commands:
+```
+npm run start:dev -- -- calc-house-materials --width [number] --length [number] --isFeet [boolean] --name [string]
+```
+OR
+```
+npm run start:dev -- -- get-house-materials --name [string]
+```
+Both yargs commands output their parameters to the console.
+
 ## Start Scripts
 
 This project has the following scripts:
