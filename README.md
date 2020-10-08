@@ -21,6 +21,9 @@ This project contains the following packages:
 
 - Mocha & Chai
 
+- nyc
+    - nycrc.json
+
 ## Installation Instructions
 
 To install this package please run:
@@ -43,7 +46,7 @@ To run the program use:
 npm run start
 ```
 
-To run the linter:
+To run the linter use:
 ```
 npm run lint
 ```
@@ -53,9 +56,14 @@ To run the code formatter use:
 npm run prettier
 ```
 
-To run the code tester:
+To run the code tester use:
 ```
 npm run test
+```
+
+To run the code tester with coverage report use:
+```
+npm run test:coverage
 ```
 
 To compile and run the program use:
