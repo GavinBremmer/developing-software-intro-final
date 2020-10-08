@@ -19,6 +19,8 @@ This project contains the following packages:
     - .prettierrc.json
     - .prettierignore
 
+- Mocha & Chai
+
 ## Installation Instructions
 
 To install this package please run:
@@ -51,12 +53,17 @@ To run the code formatter use:
 npm run prettier
 ```
 
+To run the code tester:
+```
+npm run test
+```
+
 To compile and run the program use:
 ```
 npm run start:dev
 ```
 
-To lint, format, compile and run the program use:
+To lint, format, test, compile and run the program use:
 ```
 npm run start:all
 ```
