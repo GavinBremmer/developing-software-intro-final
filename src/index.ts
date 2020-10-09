@@ -37,7 +37,7 @@ yargs.command(
         let width = args.width
         let length = args.length
         let units = args.isFeet
-        calcHouseMaterials(name,width,length,units)
+        console.log(calcHouseMaterials(name,width,length,units))
     }
 );
 
@@ -56,7 +56,7 @@ yargs.command(
 
     function( args ){
         let name = args.name
-        getHouseMaterials(name)
+        console.log(getHouseMaterials(name))
     }
 );
 

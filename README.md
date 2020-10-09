@@ -24,6 +24,8 @@ This project contains the following packages:
 - nyc
     - nycrc.json
 
+- Yargs
+
 ## Installation Instructions
 
 To install this package please run:
@@ -41,7 +43,7 @@ OR
 ```
 npm run start:dev -- -- get-house-materials --name [string]
 ```
-Both yargs commands output their parameters to the console.
+Both yargs commands output a House object with relevant fields populated.
 
 ## Start Scripts
 

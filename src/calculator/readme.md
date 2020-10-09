@@ -1,6 +1,6 @@
 # calcHouseMaterials ( name:string , width:number , length:number , units:boolean )
 
-This function takes a name, width, length and units and outputs them to the console.
+This function takes a name, width, length and units and returns a House object with name, width and length populated.
 
 ## Parameters
 
@@ -11,15 +11,48 @@ This function takes a name, width, length and units and outputs them to the cons
 
 ## Usage
 
-Outputs parameters to the console.
+Create a House object example:
+
+```javascript
+// example from location relative to src/index.ts
+import { calcHouseMaterials } from './calculator'
+
+calcHouseMaterials("Test",50,50,true);
+
+returns {
+  name: 'Test',
+  house: {
+    width: 50,
+    length: 50,
+    outsideWallArea: 0,
+    insideWallArea: 0,
+    ceilingArea: 0
+  },
+  materials: {
+    lumber: { '2x4': 0, '4x4': 0 },
+    plywood: { '4x8': 0 },
+    drywall: { '4x8': 0 }
+  },
+  waste: {
+    lumber: { '2x4': 0, '4x4': 0 },
+    plywood: { '4x8': 0 },
+    drywall: { '4x8': 0 }
+  },
+  purchase: {
+    lumber: { '2x4': 0, '4x4': 0 },
+    plywood: { '4x8': 0 },
+    drywall: { '4x8': 0 }
+  }
+}
+```
 
 ## Returns
 
-Returns `void`
+Returns `object` matching House interface
 
 # getHouseMaterials ( name:string )
 
-This function takes a name and outputs it to the console.
+This function takes a name and returns a House object with name populated.
 
 ## Parameters
 
@@ -27,8 +60,41 @@ This function takes a name and outputs it to the console.
 
 ## Usage
 
-Outputs parameter to the console.
+Create a House object example:
+
+```javascript
+// example from location relative to src/index.ts
+import { getHouseMaterials } from './calculator'
+
+getHouseMaterials("Test");
+
+returns {
+  name: 'Test',
+  house: {
+    width: 0,
+    length: 0,
+    outsideWallArea: 0,
+    insideWallArea: 0,
+    ceilingArea: 0
+  },
+  materials: {
+    lumber: { '2x4': 0, '4x4': 0 },
+    plywood: { '4x8': 0 },
+    drywall: { '4x8': 0 }
+  },
+  waste: {
+    lumber: { '2x4': 0, '4x4': 0 },
+    plywood: { '4x8': 0 },
+    drywall: { '4x8': 0 }
+  },
+  purchase: {
+    lumber: { '2x4': 0, '4x4': 0 },
+    plywood: { '4x8': 0 },
+    drywall: { '4x8': 0 }
+  }
+}
+```
 
 ## Returns
 
-Returns `void`
+Returns `object` matching House interface
