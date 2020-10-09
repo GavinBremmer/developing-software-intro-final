@@ -1,7 +1,6 @@
 import yargs = require('yargs');
 import { calcHouseMaterials, getHouseMaterials } from './calculator';
 
-
 yargs.command(
     "calc-house-materials",
 

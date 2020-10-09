@@ -1,4 +1,4 @@
-import { calcHouseMaterials, getHouseMaterials, calcWallLumber, calcDrywall } from "../src/calculator";
+import { calcHouseMaterials, getHouseMaterials, calcWallLumber, calcDrywall, calcPlywood } from "../src/calculator";
 import { expect } from "chai";
 import "mocha";
 
@@ -123,8 +123,19 @@ describe("calcDrywall", () => {
         const result = calcDrywall(199,199);
         expect(result).to.equal(24);
     });
-    it("should return 2 posts, 34 studs, 18 plates", () => {
+    it("should return 94 sheets", () => {
         const result = calcDrywall(500,500);
         expect(result).to.equal(94);
+    });
+});
+
+describe("calcPlywood", () => {
+    it("should return 16 sheets", () => {
+        const result = calcPlywood(192,192);
+        expect(result).to.equal(16);
+    });
+    it("should return 42 sheets", () => {
+        const result = calcPlywood(500,500);
+        expect(result).to.equal(42);
     });
 });
