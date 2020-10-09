@@ -98,3 +98,27 @@ returns {
 ## Returns
 
 Returns `object` matching House interface
+
+# calcWallLumber ( inches:number )
+
+This function takes a measurement in inches and returns the lumber required to frame a single wall.
+
+## Parameters
+
+  - `inches:number` The length of the wall in inches
+
+## Usage
+
+Calculate lumber required to build a wall:
+
+```javascript
+// example from location relative to src/index.ts
+import { calcWallLumber } from './calculator'
+
+const result = calcWallLumber(100);
+console.log(result); // { posts: 0, studs: 14, plates: 6 }
+```
+
+## Returns
+
+Returns `object` containing posts:, studs:, plates:

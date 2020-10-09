@@ -2,7 +2,7 @@ import { House } from "./interfaces"
 
 export function calcHouseMaterials(name:string,width:number,length:number,units:boolean):House{
     return {
-        name: name ,
+        name: name,
         house: {
             width: width,
             length: length,
@@ -48,6 +48,7 @@ export function calcHouseMaterials(name:string,width:number,length:number,units:
         }
     }
 }
+
 export function getHouseMaterials(name:string):House{
     return {
         name: name ,
@@ -95,4 +96,40 @@ export function getHouseMaterials(name:string):House{
             }
         }
     }
+}
+
+export function calcWallLumber(inches:number){
+    //take wall length in inches, remove corner post width, divide to get total 16 foot sections, one rounded, one unrounded
+
+    const quotient = (inches - 7) / 192;
+    const Section16 = Math.floor((inches - 7) / 192);
+
+    //subtract rounded from unrounded and return measurement to inches to get length of remaining section, remove length of internal posts
+    const remainderwall = (quotient - Section16) * 192 - Section16 * 3.5;
+
+    //get studs for remainder wall, remove length of side baords and add them in manually after calculation
+    const remainderwallstuds = Math.floor((remainderwall - 3) / 16) + 2;
+
+    //get plates for remainder wall, multiply by 3 to allow for one floor plate and two roof plates
+    const remainderwallplates = Math.ceil(remainderwall / 96) * 3;
+
+    //populate studs var, each 16 foot section contains 13 studs including sideboards
+    const studs = remainderwallstuds + Section16 * 13;
+
+    //populate plates var, each 16 foot section contains 6 plates
+    const plates = remainderwallplates + Section16 * 6;
+
+    //populate posts var, each 16 foot section adds one post
+    let posts = Section16;
+
+    //handle edge case for walls between 16 and 20 feet in length
+    if (inches < 240) {
+        posts = 0;
+    }
+
+    return {
+        posts,
+        studs,
+        plates,
+    };
 }
