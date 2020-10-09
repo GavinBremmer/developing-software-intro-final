@@ -122,3 +122,28 @@ console.log(result); // { posts: 0, studs: 14, plates: 6 }
 ## Returns
 
 Returns `object` containing posts:, studs:, plates:
+
+# calcDrywall ( width:number, length:number )
+
+This function takes the width and length of a house and returns the number of 4X8 foot sheets of drywall required for the interior walls and ceiling.
+
+## Parameters
+
+  - `width:number` The width of the house in inches
+  - `length:number` The length of the house in inches
+
+## Usage
+
+Calculate drywall required for a house:
+
+```javascript
+// example from location relative to src/index.ts
+import { calcDrywall } from './calculator'
+
+const result = calcDrywall(199,199);
+console.log(result); // 24
+```
+
+## Returns
+
+Returns `number` of 4X8 foot sheets of drywall required

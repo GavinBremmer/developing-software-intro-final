@@ -1,6 +1,4 @@
-import { calcHouseMaterials } from "../src/calculator";
-import { getHouseMaterials } from "../src/calculator";
-import {calcWallLumber} from "../src/calculator"
+import { calcHouseMaterials, getHouseMaterials, calcWallLumber, calcDrywall } from "../src/calculator";
 import { expect } from "chai";
 import "mocha";
 
@@ -106,15 +104,27 @@ describe("getHouseMaterials", () => {
           }
       });
     });
-  });
+});
 
-  describe("calcWallLumber", () => {
-    it("should return 0 posts, 7 studs, 3 plates", () => {
-      const result = calcWallLumber(100);
-      expect(result).to.eql({ posts: 0, studs: 7, plates: 3 });
+
+describe("calcWallLumber", () => {
+it("should return 0 posts, 7 studs, 3 plates", () => {
+    const result = calcWallLumber(100);
+    expect(result).to.eql({ posts: 0, studs: 7, plates: 3 });
+});
+it("should return 2 posts, 34 studs, 18 plates", () => {
+    const result = calcWallLumber(500);
+    expect(result).to.eql({ posts: 2, studs: 34, plates: 18 });
+    });
+});
+
+describe("calcDrywall", () => {
+    it("should return 24 sheets", () => {
+        const result = calcDrywall(199,199);
+        expect(result).to.equal(24);
     });
     it("should return 2 posts, 34 studs, 18 plates", () => {
-        const result = calcWallLumber(500);
-        expect(result).to.eql({ posts: 2, studs: 34, plates: 18 });
-      });
-  });  
+        const result = calcDrywall(500,500);
+        expect(result).to.equal(94);
+    });
+});

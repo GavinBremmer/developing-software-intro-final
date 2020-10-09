@@ -133,3 +133,8 @@ export function calcWallLumber(inches:number){
         plates,
     };
 }
+
+export function calcDrywall(width:number,length:number) {
+    const sheets = Math.ceil((((length-7)/48)*2)+(((width-7)/48)*2)+(((width-7)*(length-7))/4608))
+    return sheets
+}
