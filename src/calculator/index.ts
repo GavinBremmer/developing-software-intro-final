@@ -127,11 +127,10 @@ export function calcWallLumber(inches:number){
         posts = 0;
     }
 
-    return {
-        posts,
-        studs,
-        plates,
-    };
+    const boards = studs+plates
+
+    return {boards, posts}
+    
 }
 
 export function calcDrywall(width:number,length:number) {
@@ -142,4 +141,8 @@ export function calcDrywall(width:number,length:number) {
 export function calcPlywood(width:number,length:number){
     const sheets = Math.ceil(((length/48)*2)+((width/48)*2))
     return sheets
+}
+
+export function calcMaterials(width:number, length:number, calcWallLumber:object, calcDrywall:number, calcPlywood:number){
+    let boards = calcWallLumber(oh, god)
 }
